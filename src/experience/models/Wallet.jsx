@@ -47,6 +47,10 @@ const Model = forwardRef(({ materialConfig, ...props }, ref) => {
 }, [nodes])
 
 
+React.useEffect(() => {
+  console.log("Textura aplicada:", textures.map.image?.src);
+}, [textures]);
+
 
   return (
  <group ref={group} {...props} dispose={null}>
