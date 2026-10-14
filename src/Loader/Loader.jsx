@@ -14,7 +14,7 @@ export default function Loader() {
     if (!active && progress === 100) {
       const timeout = setTimeout(() => {
         setVisible(false);
-      }, 500);
+      }, 1000);
 
       return () => clearTimeout(timeout);
     }
