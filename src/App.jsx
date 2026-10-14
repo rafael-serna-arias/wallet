@@ -13,6 +13,10 @@ import ProductHero from "./components/sections/product-hero/ProductHero.jsx"
 import Details from "./components/sections/details/Details.jsx"
 
 import ProductPopUp from "./components/sections/product-pop-up/ProductPopUp.jsx"
+import Loader from "@/Loader/Loader.jsx"
+
+
+import "@/utils/preloadTextures";
 
 export default function App() {
 
@@ -29,6 +33,8 @@ export default function App() {
   return (
     <>
 
+      <Loader />
+     
       <Details 
         scrollOffset= {scrollOffset}
       />
@@ -60,10 +66,6 @@ export default function App() {
           position: isDesktop ? [0, 0.5, 9] : [0, 0.5, 8],
           fov: isDesktop ? 40 : 55        
         }}
-        // camera={{
-        //   position: [0, 0, 12],
-        //   fov: 30
-        // }}
       >
 
         {/* <axesHelper args={[10]}/> */}

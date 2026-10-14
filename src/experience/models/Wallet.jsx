@@ -25,6 +25,8 @@ const Model = forwardRef(({ materialConfig, ...props }, ref) => {
   }))
 
   const textures = useTexture(materialConfig)
+
+
   const CardsTextures = useTexture(creditCadsTextures)
   CardsTextures['card-2'].flipY = false
   CardsTextures['card-1'].flipY = false
@@ -43,7 +45,9 @@ const Model = forwardRef(({ materialConfig, ...props }, ref) => {
   )
 
 }, [nodes])
-  
+
+
+
   return (
  <group ref={group} {...props} dispose={null}>
       <group name="Scene">
